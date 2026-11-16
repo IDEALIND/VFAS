@@ -263,7 +263,7 @@
     return `${d}/${m}/${y}`;
   }
 
-  // Formulário 1: Remoção de Pacientes -> WhatsApp
+  // Formulário 1: Transporte de Pacientes -> WhatsApp
   const formRemocao = document.getElementById('form-remocao');
   if (formRemocao) {
     formRemocao.addEventListener('submit', (e) => {
@@ -280,14 +280,14 @@
       const obs = (fd.get('obs') || '').toString().trim();
 
       const lines = [
-        'Olá, equipe *Vital Family*! Gostaria de solicitar a avaliação para uma *Remoção de Paciente*:',
+        'Olá, equipe *Vital Family*! Gostaria de solicitar a avaliação para um *Transporte de Paciente*:',
         '',
-        `• *Quem precisa da remoção:* ${quem}`,
+        `• *Quem precisa do transporte:* ${quem}`,
         `• *Condição de mobilidade:* ${mobilidade}`,
         `• *Endereço/Local de origem:* ${origem}`,
         `• *Endereço/Local de destino:* ${destino}`,
         `• *Data desejada:* ${data}`,
-        `• *Acompanhamento especial:* ${acompanhamento}`,
+        `• *Uso de equipamentos e insumos:* ${acompanhamento}`,
         `• *Nome do responsável:* ${responsavel}`,
         `• *Telefone/WhatsApp:* ${whatsapp}`,
       ];
@@ -301,7 +301,7 @@
     });
   }
 
-  // Formulário 2: Home Care / Visita Domiciliar (EMAD) -> WhatsApp
+  // Formulário 2: Home Care / Visita Domiciliar -> WhatsApp
   const formHomeCare = document.getElementById('form-homecare');
   if (formHomeCare) {
     formHomeCare.addEventListener('submit', (e) => {
@@ -314,7 +314,7 @@
       const necessidades = (fd.get('necessidades') || '').toString().trim();
 
       const lines = [
-        'Olá, equipe *Vital Family*! Quero saber mais sobre o atendimento de *Home Care / Visita Domiciliar (EMAD)*:',
+        'Olá, equipe *Vital Family*! Quero saber mais sobre o atendimento de *Home Care / Visita Domiciliar*:',
         '',
         `• *Nome do responsável:* ${responsavel}`,
         `• *WhatsApp de contato:* ${whatsapp}`,
@@ -325,6 +325,72 @@
       }
       lines.push(`• *Necessidades de assistência:* ${necessidades}`);
       lines.push('', 'Aguardo o retorno da equipe para orientação. Obrigado(a)!');
+
+      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
+  // Formulário 3: Locação de Ambulâncias -> WhatsApp
+  const formLocacao = document.getElementById('form-locacao');
+  if (formLocacao) {
+    formLocacao.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(formLocacao);
+      const responsavel = (fd.get('responsavel') || '').toString().trim();
+      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
+      const finalidade = (fd.get('finalidade') || '').toString().trim();
+      const periodo = (fd.get('periodo') || '').toString().trim();
+      const cidade = (fd.get('cidade') || '').toString().trim();
+      const obs = (fd.get('obs') || '').toString().trim();
+
+      const lines = [
+        'Olá, equipe *Vital Family*! Gostaria de solicitar um orçamento para *Locação de Ambulância*:',
+        '',
+        `• *Nome / Empresa:* ${responsavel}`,
+        `• *Telefone / WhatsApp:* ${whatsapp}`,
+        `• *Finalidade:* ${finalidade}`,
+        `• *Data / Período:* ${periodo}`,
+        `• *Cidade / Local:* ${cidade}`,
+      ];
+      if (obs) {
+        lines.push(`• *Observações:* ${obs}`);
+      }
+      lines.push('', 'Aguardo o retorno da equipe comercial. Obrigado(a)!');
+
+      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
+  // Formulário 4: Assistência em Eventos -> WhatsApp
+  const formEventos = document.getElementById('form-eventos');
+  if (formEventos) {
+    formEventos.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(formEventos);
+      const responsavel = (fd.get('responsavel') || '').toString().trim();
+      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
+      const tipo = (fd.get('tipo') || '').toString().trim();
+      const publico = (fd.get('publico') || '').toString().trim();
+      const data = (fd.get('data') || '').toString().trim();
+      const local = (fd.get('local') || '').toString().trim();
+      const obs = (fd.get('obs') || '').toString().trim();
+
+      const lines = [
+        'Olá, equipe *Vital Family*! Gostaria de solicitar um orçamento de *Assistência em Eventos (Apoio Ambulatorial)*:',
+        '',
+        `• *Nome / Organização:* ${responsavel}`,
+        `• *Telefone / WhatsApp:* ${whatsapp}`,
+        `• *Tipo de evento:* ${tipo}`,
+        `• *Público estimado:* ${publico}`,
+        `• *Data e horário:* ${data}`,
+        `• *Cidade / Local:* ${local}`,
+      ];
+      if (obs) {
+        lines.push(`• *Observações:* ${obs}`);
+      }
+      lines.push('', 'Aguardo o retorno da equipe para alinhamento da cobertura. Obrigado(a)!');
 
       const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
       window.open(url, '_blank', 'noopener');
