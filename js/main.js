@@ -301,7 +301,7 @@
     });
   }
 
-  // Formulário 2: Home Care / Visita Domiciliar -> WhatsApp
+  // Formulário 2: Home Care -> WhatsApp
   const formHomeCare = document.getElementById('form-homecare');
   if (formHomeCare) {
     formHomeCare.addEventListener('submit', (e) => {
@@ -314,7 +314,7 @@
       const necessidades = (fd.get('necessidades') || '').toString().trim();
 
       const lines = [
-        'Olá, equipe *Vital Family*! Quero saber mais sobre o atendimento de *Home Care / Visita Domiciliar*:',
+        'Olá, equipe *Vital Family*! Quero saber mais sobre o atendimento de *Home Care*:',
         '',
         `• *Nome do responsável:* ${responsavel}`,
         `• *WhatsApp de contato:* ${whatsapp}`,
