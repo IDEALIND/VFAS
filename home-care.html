@@ -1,386 +1,629 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home Care | Vital Family — Assistência em Saúde</title>
-  <meta name="description" content="Cuidado humanizado no conforto do seu lar. Conheça o serviço de Home Care e Equipe Multiprofissional da Vital Family.">
+  <meta name="description"
+    content="Cuidado humanizado no conforto do seu lar. Conheça o serviço de Home Care e Equipe Multiprofissional da Vital Family.">
   <meta name="theme-color" content="#07122a">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Home Care | Vital Family — Assistência em Saúde">
+  <meta property="og:description" content="Cuidado humanizado no conforto do seu lar em Natal e região metropolitana. Conheça o Home Care e Equipe Multiprofissional da Vital Family.">
+  <meta property="og:image" content="assets/logo.jpeg">
   <link rel="icon" href="assets/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Great+Vibes&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Great+Vibes&family=Kaushan+Script&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-<!-- ===== SVG ICON SPRITE ===== -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f6dc8e"/><stop offset=".5" stop-color="#d9ac4f"/><stop offset="1" stop-color="#b8862c"/>
-    </linearGradient>
-  </defs>
-  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4.5 5.6v5.6c0 4.7 3.2 8.6 7.5 10 4.3-1.4 7.5-5.3 7.5-10V5.6Z"/><path d="m8.6 12 2.4 2.4 4.5-4.6"/></g></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.1-8 11-8 11Z"/></symbol>
-  <symbol id="i-heart-hands" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13.5s-5-3-5-6.6A2.7 2.7 0 0 1 12 5.4a2.7 2.7 0 0 1 5 1.5c0 3.6-5 6.6-5 6.6Z"/><path d="M2.5 14.5 6 18.2c.8.9 1.9 1.3 3 1.3h6c1.1 0 2.2-.4 3-1.3l3.5-3.7"/></g></symbol>
-  <symbol id="i-stopwatch" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 2M9.5 2.8h5M12 2.8V6M18.5 6.5l1.3-1.3"/></g></symbol>
-  <symbol id="i-handshake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1.4 1.4 0 0 0 2-2"/><path d="m14 14 2.5 2.5a1.4 1.4 0 0 0 2-2l-3.9-3.9a2.5 2.5 0 0 0-3.5 0l-.9.9a1.4 1.4 0 0 1-2-2l2.8-2.8a3.5 3.5 0 0 1 4.3-.5l.5.3c.4.3 1 .4 1.5.3L21 6"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1.4 1.4 0 0 0 2-2M3 4h8"/></g></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3"/><path d="M6.5 19.5v-1a5.5 5.5 0 0 1 11 0v1"/><circle cx="5" cy="9.5" r="2.2"/><path d="M1.5 18v-.6A3.6 3.6 0 0 1 5 13.8"/><circle cx="19" cy="9.5" r="2.2"/><path d="M22.5 18v-.6a3.6 3.6 0 0 0-3.5-3.6"/></g></symbol>
-  <symbol id="i-ambulance" viewBox="0 0 24 24"><g fill="currentColor"><path d="M2 7.5A1.5 1.5 0 0 1 3.5 6h10A1.5 1.5 0 0 1 15 7.5V9h3.2c.5 0 .9.2 1.2.6l2.3 3.1c.2.3.3.6.3.9V16a1 1 0 0 1-1 1h-1.1a2.7 2.7 0 0 0-5.3 0H9.4a2.7 2.7 0 0 0-5.3 0H3a1 1 0 0 1-1-1Zm13 3v2.5h4.8l-1.9-2.5Z"/><circle cx="6.8" cy="17.3" r="1.7"/><circle cx="17.3" cy="17.3" r="1.7"/></g><path fill="#0b1934" d="M7.7 8.2h1.6v1.9h1.9v1.6H9.3v1.9H7.7v-1.9H5.8v-1.6h1.9Z"/><path fill="currentColor" d="M5 3.5h3V5H5z"/></symbol>
-  <symbol id="i-stetho" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3H4v5a5 5 0 0 0 10 0V3h-1"/><path d="M9 13v1.5a5.5 5.5 0 0 0 11 0V13"/><circle cx="20" cy="10.5" r="2.2"/></g></symbol>
-  <symbol id="i-home-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/><path d="M12 17.2s-3.2-1.9-3.2-4.1a1.7 1.7 0 0 1 3.2-.9 1.7 1.7 0 0 1 3.2.9c0 2.2-3.2 4.1-3.2 4.1Z"/></g></symbol>
-  <symbol id="i-heart-pulse" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-8.5-5-8.5-11.2A4.6 4.6 0 0 1 12 6.6a4.6 4.6 0 0 1 8.5 2.7c0 6.2-8.5 11.2-8.5 11.2Z"/><path d="M3.8 12h4l1.5-2.5 2.4 5 1.8-3.3H20"/></g></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1Z"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm.8 2v.3l8.2 5.4 8.2-5.4V7Z"/></symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
-  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 12 2Z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
-  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
-  <symbol id="i-ribbon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-3.1 0-5.6 2.4-5.6 5.4 0 2.1 1.3 4.3 3.2 6.6L6 21.3l3.1 1.2 2.9-5.8 2.9 5.8 3.1-1.2-3.6-7.3c1.9-2.3 3.2-4.5 3.2-6.6C17.6 4.4 15.1 2 12 2Zm0 3c1.5 0 2.6 1.1 2.6 2.4 0 1.2-.9 2.8-2.6 4.8-1.7-2-2.6-3.6-2.6-4.8C9.4 6.1 10.5 5 12 5Z"/></symbol>
-</svg>
+  <!-- ===== SVG ICON SPRITE ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f6dc8e" />
+        <stop offset=".5" stop-color="#d9ac4f" />
+        <stop offset="1" stop-color="#b8862c" />
+      </linearGradient>
+    </defs>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2.8 4.5 5.6v5.6c0 4.7 3.2 8.6 7.5 10 4.3-1.4 7.5-5.3 7.5-10V5.6Z" />
+        <path d="m8.6 12 2.4 2.4 4.5-4.6" />
+      </g>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"
+        d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.1-8 11-8 11Z" />
+    </symbol>
+    <symbol id="i-heart-hands" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 13.5s-5-3-5-6.6A2.7 2.7 0 0 1 12 5.4a2.7 2.7 0 0 1 5 1.5c0 3.6-5 6.6-5 6.6Z" />
+        <path d="M2.5 14.5 6 18.2c.8.9 1.9 1.3 3 1.3h6c1.1 0 2.2-.4 3-1.3l3.5-3.7" />
+      </g>
+    </symbol>
+    <symbol id="i-stopwatch" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="13.5" r="7.5" />
+        <path d="M12 9.5v4l2.5 2M9.5 2.8h5M12 2.8V6M18.5 6.5l1.3-1.3" />
+      </g>
+    </symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m11 17 2 2a1.4 1.4 0 0 0 2-2" />
+        <path
+          d="m14 14 2.5 2.5a1.4 1.4 0 0 0 2-2l-3.9-3.9a2.5 2.5 0 0 0-3.5 0l-.9.9a1.4 1.4 0 0 1-2-2l2.8-2.8a3.5 3.5 0 0 1 4.3-.5l.5.3c.4.3 1 .4 1.5.3L21 6" />
+        <path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1.4 1.4 0 0 0 2-2M3 4h8" />
+      </g>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"
+        d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" />
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="7.5" r="3" />
+        <path d="M6.5 19.5v-1a5.5 5.5 0 0 1 11 0v1" />
+        <circle cx="5" cy="9.5" r="2.2" />
+        <path d="M1.5 18v-.6A3.6 3.6 0 0 1 5 13.8" />
+        <circle cx="19" cy="9.5" r="2.2" />
+        <path d="M22.5 18v-.6a3.6 3.6 0 0 0-3.5-3.6" />
+      </g>
+    </symbol>
+    <symbol id="i-ambulance" viewBox="0 0 24 24">
+      <g fill="currentColor">
+        <path
+          d="M2 7.5A1.5 1.5 0 0 1 3.5 6h10A1.5 1.5 0 0 1 15 7.5V9h3.2c.5 0 .9.2 1.2.6l2.3 3.1c.2.3.3.6.3.9V16a1 1 0 0 1-1 1h-1.1a2.7 2.7 0 0 0-5.3 0H9.4a2.7 2.7 0 0 0-5.3 0H3a1 1 0 0 1-1-1Zm13 3v2.5h4.8l-1.9-2.5Z" />
+        <circle cx="6.8" cy="17.3" r="1.7" />
+        <circle cx="17.3" cy="17.3" r="1.7" />
+      </g>
+      <path fill="#0b1934" d="M7.7 8.2h1.6v1.9h1.9v1.6H9.3v1.9H7.7v-1.9H5.8v-1.6h1.9Z" />
+      <path fill="currentColor" d="M5 3.5h3V5H5z" />
+    </symbol>
+    <symbol id="i-stetho" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 3H4v5a5 5 0 0 0 10 0V3h-1" />
+        <path d="M9 13v1.5a5.5 5.5 0 0 0 11 0V13" />
+        <circle cx="20" cy="10.5" r="2.2" />
+      </g>
+    </symbol>
+    <symbol id="i-home-heart" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 10.5 12 3l9 7.5" />
+        <path d="M5 9v11h14V9" />
+        <path d="M12 17.2s-3.2-1.9-3.2-4.1a1.7 1.7 0 0 1 3.2-.9 1.7 1.7 0 0 1 3.2.9c0 2.2-3.2 4.1-3.2 4.1Z" />
+      </g>
+    </symbol>
+    <symbol id="i-heart-pulse" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5s-8.5-5-8.5-11.2A4.6 4.6 0 0 1 12 6.6a4.6 4.6 0 0 1 8.5 2.7c0 6.2-8.5 11.2-8.5 11.2Z" />
+        <path d="M3.8 12h4l1.5-2.5 2.4 5 1.8-3.3H20" />
+      </g>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1Z" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm.8 2v.3l8.2 5.4 8.2-5.4V7Z" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4.2" />
+      </g>
+      <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" />
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2a10 10 0 0 0-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 12 2Z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        d="M5 12h14m-5-5 5 5-5 5" />
+    </symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+        d="m9 5 7 7-7 7" />
+    </symbol>
+    <symbol id="i-ribbon" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2c-3.1 0-5.6 2.4-5.6 5.4 0 2.1 1.3 4.3 3.2 6.6L6 21.3l3.1 1.2 2.9-5.8 2.9 5.8 3.1-1.2-3.6-7.3c1.9-2.3 3.2-4.5 3.2-6.6C17.6 4.4 15.1 2 12 2Zm0 3c1.5 0 2.6 1.1 2.6 2.4 0 1.2-.9 2.8-2.6 4.8-1.7-2-2.6-3.6-2.6-4.8C9.4 6.1 10.5 5 12 5Z" />
+    </symbol>
+  </svg>
 
-<!-- ===== HEADER ===== -->
-<header class="header" id="header">
-  <div class="container header__inner">
-    <a href="index.html" class="brand" aria-label="Vital Family - Início">
-      <img src="assets/logo.jpeg" alt="Logotipo Vital Family" class="brand__logo" width="88" height="88">
-      <span class="brand__text">
-        <strong>VITAL FAMILY</strong>
-        <small>ASSISTÊNCIA EM SAÚDE</small>
-      </span>
-    </a>
-
-    <nav class="nav" id="nav" aria-label="Navegação principal">
-      <ul class="nav__list">
-        <li><a href="index.html#inicio" class="nav__link">Início</a></li>
-        <li><a href="index.html#sobre" class="nav__link">Sobre Nós</a></li>
-        <li class="nav__item--has-sub">
-          <a href="index.html#servicos" class="nav__link is-active">Nossos Serviços <svg class="ico-caret"><use href="#i-chev"/></svg></a>
-          <ul class="nav__sub" aria-label="Páginas de serviços">
-            <li><a href="remocao-de-pacientes.html"><svg><use href="#i-ambulance"/></svg> Transporte de Pacientes</a></li>
-            <li><a href="locacao-de-ambulancias.html"><svg><use href="#i-ambulance"/></svg> Locação de Ambulâncias</a></li>
-            <li><a href="home-care.html" class="is-current"><svg><use href="#i-home-heart"/></svg> Home Care</a></li>
-            <li><a href="assistencia-em-eventos.html"><svg><use href="#i-heart-pulse"/></svg> Assistência em Eventos</a></li>
-            <li><a href="index.html#servicos"><svg><use href="#i-stetho"/></svg> Ver todos os serviços</a></li>
-          </ul>
-        </li>
-        <li><a href="index.html#diferenciais" class="nav__link">Diferenciais</a></li>
-        <li><a href="index.html#novembro-azul" class="nav__link nav__link--blue"><svg class="ico-ribbon"><use href="#i-ribbon"/></svg> Novembro Azul</a></li>
-        <li><a href="index.html#depoimentos" class="nav__link">Depoimentos</a></li>
-        <li><a href="#contato-homecare" class="nav__link">Contato</a></li>
-      </ul>
-      <a href="#contato-homecare" class="btn btn--gold btn--sm nav__cta">
-        <svg class="ico"><use href="#i-whatsapp"/></svg> Quero saber mais
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="Vital Family - Início">
+        <img src="assets/logo.jpeg" alt="Logotipo Vital Family" class="brand__logo" width="88" height="88">
+        <span class="brand__text">
+          <strong>VITAL FAMILY</strong>
+          <small>ASSISTÊNCIA EM SAÚDE</small>
+        </span>
       </a>
-    </nav>
 
-    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-  <!-- ===== HERO HOME CARE ===== -->
-  <section class="hero hero--sub" id="topo">
-    <div class="hero__bg" style="background-image:url('assets/img/svc-homecare.jpg')" aria-hidden="true"></div>
-    <div class="hero__media reveal" data-reveal="right">
-      <div class="hero__frame">
-        <img src="assets/img/svc-homecare.jpg" alt="Profissional de saúde da Vital Family atendendo paciente idosa com carinho no conforto do seu lar" width="960" height="512" fetchpriority="high">
-      </div>
-    </div>
-    <div class="container hero__inner">
-      <div class="hero__content reveal">
-        <nav class="breadcrumb" aria-label="Trilha de navegação">
-          <a href="index.html">Início</a>
-          <span>/</span>
-          <a href="index.html#servicos">Nossos Serviços</a>
-          <span>/</span>
-          <strong aria-current="page">Home Care</strong>
-        </nav>
-        <span class="eyebrow">VITAL FAMILY • ASSISTÊNCIA DOMICILIAR</span>
-        <h1 class="hero__title">Cuidado humanizado, <span class="gold-text">no conforto do seu lar.</span></h1>
-        <p class="hero__lead">Levamos assistência profissional, ética e acolhedora até a casa da sua família, unindo segurança técnica, presença humana e respeito à rotina de quem você ama.</p>
-        <div class="hero__actions">
-          <a href="#contato-homecare" class="btn btn--gold">
-            <svg class="ico"><use href="#i-home-heart"/></svg> Quero saber mais sobre Home Care
-          </a>
-        </div>
-        <p class="hero__safe"><svg class="ico ico--gold"><use href="#i-shield"/></svg> Assistência personalizada em domicílio com o padrão de qualidade Vital Family.</p>
-      </div>
-    </div>
-    <svg class="hero__swoosh" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-      <defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#b8862c"/><stop offset=".45" stop-color="#f6dc8e"/><stop offset="1" stop-color="#c99a3d"/></linearGradient></defs>
-      <path d="M0 52 C 380 92, 900 96, 1440 4 L1440 90 L0 90Z" fill="#081530"/>
-      <path d="M0 52 C 380 92, 900 96, 1440 4" fill="none" stroke="url(#sw)" stroke-width="3.5"/>
-    </svg>
-  </section>
-
-  <!-- ===== O QUE É HOME CARE / EXPLICAÇÃO ===== -->
-  <section class="about" id="sobre-homecare">
-    <div class="about__media reveal" data-reveal="left">
-      <img src="assets/img/svc-enfermagem.jpg" alt="Profissional de enfermagem cuidando de paciente idosa em domicílio" loading="lazy" width="960" height="512">
-    </div>
-    <div class="about__panel">
-      <div class="about__content reveal">
-        <span class="eyebrow">O QUE É HOME CARE</span>
-        <h2 class="about__title">Acolhimento profissional <span class="gold-text">perto da família</span></h2>
-        <p>O <strong>Home Care</strong> da Vital Family foi estruturado para oferecer assistência à saúde diretamente na residência do paciente, preservando o convívio familiar, o bem-estar emocional e o conforto do lar.</p>
-        <p>A nossa missão é executar com excelência os nossos serviços com protocolos seguros, atendimento humanizado, informações claras, participação da família em cada etapa do processo e conforto para todos os nossos pacientes. O nosso lema é claro: Podemos possuir todos os procedimentos técnicos, mas, ao tocar uma alma humana, seja apenas uma alma humana.</p>
-        <a href="#contato-homecare" class="btn btn--outline">Quero saber mais sobre Home Care <svg class="ico"><use href="#i-arrow"/></svg></a>
-      </div>
-      <ul class="about__list reveal">
-        <li><svg class="ico-lg"><use href="#i-home-heart"/></svg><span>Recuperação no<br> conforto de casa</span></li>
-        <li><svg class="ico-lg"><use href="#i-heart-hands"/></svg><span>Atendimento<br> humanizado e próximo</span></li>
-        <li><svg class="ico-lg"><use href="#i-shield"/></svg><span>Equipe qualificada<br> e de confiança</span></li>
-        <li><svg class="ico-lg"><use href="#i-handshake"/></svg><span>Apoio e orientação<br> contínua à família</span></li>
-      </ul>
-    </div>
-    <svg class="about__swoosh" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 44 L0 8 C 360 40, 960 42, 1440 16 L1440 44 Z" fill="#060f23"/>
-      <path d="M0 8 C 360 40, 960 42, 1440 16" fill="none" stroke="url(#sw)" stroke-width="2.5"/>
-    </svg>
-  </section>
-
-  <!-- ===== COMO FUNCIONA O ATENDIMENTO ===== -->
-  <section class="steps-sec" id="como-funciona">
-    <div class="container">
-      <header class="section-head reveal">
-        <h2 class="section-title section-title--line-right">Como Funciona o Atendimento</h2>
-        <p class="section-sub">Um processo claro, cuidadoso e pensado para acolher sua família desde o primeiro contato.</p>
-      </header>
-
-      <div class="steps-grid">
-        <article class="step-card reveal">
-          <span class="step-card__num">01</span>
-          <div class="step-card__icon"><svg><use href="#i-phone"/></svg></div>
-          <h3>Contato da Família</h3>
-          <p>Você entra em contato pelo formulário ou WhatsApp e compartilha o contexto e as necessidades de assistência do familiar.</p>
-        </article>
-        <article class="step-card reveal">
-          <span class="step-card__num">02</span>
-          <div class="step-card__icon"><svg><use href="#i-stetho"/></svg></div>
-          <h3>Entendimento das Necessidades</h3>
-          <p>Nossa equipe compreende a rotina, orientações médicas e o formato de assistência domiciliar mais adequado.</p>
-        </article>
-        <article class="step-card reveal">
-          <span class="step-card__num">03</span>
-          <div class="step-card__icon"><svg><use href="#i-users"/></svg></div>
-          <h3>Definição do Atendimento</h3>
-          <p>Organizamos o plano de Home Care e o acompanhamento multiprofissional conforme as necessidades alinhadas com a família.</p>
-        </article>
-        <article class="step-card reveal">
-          <span class="step-card__num">04</span>
-          <div class="step-card__icon"><svg><use href="#i-home-heart"/></svg></div>
-          <h3>Cuidado no Lar</h3>
-          <p>Iniciamos o atendimento em casa com responsabilidade, pontualidade, respeito e comunicação transparente com os familiares.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PARA QUEM É INDICADO & CUIDADOS OFERECIDOS ===== -->
-  <section class="services" id="indicacoes-e-cuidados">
-    <div class="container">
-      <header class="section-head reveal">
-        <h2 class="section-title section-title--lines">Para Quem é Indicado</h2>
-        <p class="section-sub">Soluções em assistência domiciliar pensadas para diferentes momentos da vida.</p>
-      </header>
-
-      <div class="audience-grid audience-grid--3">
-        <article class="aud-card reveal">
-          <div class="aud-card__icon"><svg><use href="#i-shield"/></svg></div>
-          <h3>Pacientes Acamados e com Uso de Dispositivos</h3>
-          <p>Pessoas com quadro clínico acamado e em uso de dispositivos — sejam sondas ou respiradores mecânicos — de diferentes idades.</p>
-        </article>
-        <article class="aud-card reveal">
-          <div class="aud-card__icon"><svg><use href="#i-home-heart"/></svg></div>
-          <h3>Reabilitação e Cuidados Pós-Cirúrgicos</h3>
-          <p>Pacientes em pós-cirurgia que precisam de fisioterapia, fonoaudiologia, acompanhamento nutricional ou cuidado especializado de feridas.</p>
-        </article>
-        <article class="aud-card reveal">
-          <div class="aud-card__icon"><svg><use href="#i-stetho"/></svg></div>
-          <h3>Enfermagem e Cuidador de Idosos</h3>
-          <p>Pacientes que necessitam de procedimentos e acompanhamento de técnico de enfermagem ou cuidador de idosos no conforto do lar.</p>
-        </article>
-      </div>
-
-      <!-- Cuidados e serviços efetivamente oferecidos -->
-      <div class="care-offer reveal">
-        <div class="care-offer__media">
-          <img src="assets/img/svc-humanizado.jpg" alt="Atendimento humanizado e aferição de sinais vitais em domicílio" loading="lazy" width="960" height="512">
-        </div>
-        <div class="care-offer__body">
-          <span class="eyebrow">NOSSAS SOLUÇÕES EM SAÚDE</span>
-          <h3>Cuidados e Serviços Oferecidos pela <span class="gold-text">Vital Family</span></h3>
-          <p>Atuamos de forma integrada dentro do escopo institucional da Vital Family, oferecendo suporte confiável para o cuidado domiciliar e a continuidade da assistência:</p>
-          <ul class="care-offer__list">
-            <li><svg><use href="#i-home-heart"/></svg><div><strong>Home Care:</strong> Assistência personalizada no conforto do lar, com atendimento programado e acompanhamento próximo da evolução do paciente.</div></li>
-            <li><svg><use href="#i-stetho"/></svg><div><strong>Serviços de Equipe Multiprofissional:</strong> Cuidados profissionais de enfermagem, nutrição, médico, fonoaudiólogo, fisioterapeuta, assistência social, dentista, terapeuta ocupacional, aferição e monitoramento de sinais vitais, administração de medicamentos conforme prescrição médica, curativos e cuidados gerais de higiene e conforto.</div></li>
-            <li><svg><use href="#i-heart-pulse"/></svg><div><strong>Atendimento Humanizado à Família:</strong> Escuta ativa, orientação aos familiares sobre a rotina de cuidados e dedicação em cada detalhe do atendimento.</div></li>
-            <li><svg><use href="#i-ambulance"/></svg><div><strong>Nosso diferencial:</strong> Quando o paciente em Home Care precisa realizar exames, consultas ou transferências, contamos com estrutura própria de transporte assistido.</div></li>
-          </ul>
-          <a href="#contato-homecare" class="btn btn--gold">
-            <svg class="ico"><use href="#i-whatsapp"/></svg> Quero saber mais sobre Home Care
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DÚVIDAS FREQUENTES (FAQ) ===== -->
-  <section class="faq-sec" id="duvidas">
-    <div class="container">
-      <header class="section-head reveal">
-        <h2 class="section-title section-title--line-right">Dúvidas Frequentes</h2>
-        <p class="section-sub">Respostas claras para ajudar sua família a entender como funciona o nosso atendimento domiciliar.</p>
-      </header>
-
-      <div class="faq-list reveal">
-        <details class="faq-item" open>
-          <summary>Como solicitar uma avaliação para Home Care? <svg class="faq-ico"><use href="#i-chev"/></svg></summary>
-          <div class="faq-body">
-            <p>Basta preencher o formulário abaixo ou clicar no botão do WhatsApp. Nossa equipe conversará com o responsável familiar para compreender o quadro do paciente, a cidade de atendimento e os cuidados necessários, orientando os próximos passos.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Posso contratar tanto atendimentos pontuais quanto acompanhamento contínuo? <svg class="faq-ico"><use href="#i-chev"/></svg></summary>
-          <div class="faq-body">
-            <p>Sim. A Vital Family organiza o atendimento de acordo com a necessidade de cada família — seja através de procedimentos específicos ou por meio de planos personalizados de assistência domiciliar (Home Care).</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Se o paciente em Home Care precisar ir ao hospital ou fazer exames, a Vital Family apoia? <svg class="faq-ico"><use href="#i-chev"/></svg></summary>
-          <div class="faq-body">
-            <p>Sim! Um dos grandes diferenciais da Vital Family é contar também com o serviço de <strong>Transporte de Pacientes</strong> e locação de ambulâncias, oferecendo suporte seguro caso o paciente precise se deslocar para exames, consultas ou unidades hospitalares.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FORMULÁRIO PARA CONTATO DA FAMÍLIA ===== -->
-  <section class="form-sec" id="contato-homecare">
-    <div class="container form-sec__inner">
-      <div class="form-sec__info reveal">
-        <span class="eyebrow">FALE COM NOSSA EQUIPE</span>
-        <h2 class="about__title">Quero saber mais sobre <span class="gold-text">Home Care</span></h2>
-        <p>Conte-nos um pouco sobre a necessidade do seu familiar. Ao enviar o formulário ao lado, suas informações serão organizadas em uma mensagem direta para o WhatsApp oficial da Vital Family.</p>
-
-        <div class="notice-box">
-          <svg class="ico-lg"><use href="#i-heart-hands"/></svg>
-          <div>
-            <strong>Atendimento Humanizado e Personalizado</strong>
-            <p>Cada família possui uma rotina única. Nossa equipe receberá sua mensagem e retornará com atenção para orientar a melhor forma de assistência domiciliar na sua região.</p>
-          </div>
-        </div>
-
-        <ul class="contact__info contact__info--clean">
-          <li>
-            <svg class="ico-md"><use href="#i-phone"/></svg>
-            <span><small>Central de Atendimento / WhatsApp</small><a href="tel:+5584998409453">(84) 99840-9453</a></span>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="index.html#inicio" class="nav__link">Início</a></li>
+          <li><a href="index.html#sobre" class="nav__link">Sobre Nós</a></li>
+          <li class="nav__item--has-sub">
+            <a href="index.html#servicos" class="nav__link is-active">Nossos Serviços <svg class="ico-caret">
+                <use href="#i-chev" />
+              </svg></a>
+            <ul class="nav__sub" aria-label="Páginas de serviços">
+              <li><a href="remocao-de-pacientes.html"><svg>
+                    <use href="#i-ambulance" />
+                  </svg> Transporte de Pacientes</a></li>
+              <li><a href="locacao-de-ambulancias.html"><svg>
+                    <use href="#i-ambulance" />
+                  </svg> Locação de Ambulâncias</a></li>
+              <li><a href="home-care.html" class="is-current"><svg>
+                    <use href="#i-home-heart" />
+                  </svg> Home Care</a></li>
+              <li><a href="assistencia-em-eventos.html"><svg>
+                    <use href="#i-heart-pulse" />
+                  </svg> Assistência em Eventos</a></li>
+              <li><a href="index.html#servicos"><svg>
+                    <use href="#i-stetho" />
+                  </svg> Ver todos os serviços</a></li>
+            </ul>
           </li>
-          <li>
-            <svg class="ico-md"><use href="#i-pin"/></svg>
-            <span><small>Atendemos toda Natal e região metropolitana</small>R. Henrique Dias, 224 - Bom Pastor, Natal - RN, 59060-170</span>
-          </li>
-          <li>
-            <svg class="ico-md"><use href="#i-mail"/></svg>
-            <span><a href="mailto:administrativo@vfas.com.br">administrativo@vfas.com.br</a></span>
-          </li>
+          <li><a href="index.html#diferenciais" class="nav__link">Diferenciais</a></li>
+          <li><a href="index.html#novembro-azul" class="nav__link nav__link--blue"><svg class="ico-ribbon">
+                <use href="#i-ribbon" />
+              </svg> Novembro Azul</a></li>
+          <li><a href="index.html#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li><a href="#contato-homecare" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#contato-homecare" class="btn btn--gold btn--sm nav__cta">
+          <svg class="ico">
+            <use href="#i-whatsapp" />
+          </svg> Quero saber mais
+        </a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ===== HERO HOME CARE ===== -->
+    <section class="hero hero--sub" id="topo">
+      <div class="hero__bg" style="background-image:url('assets/img/svc-homecare.jpg')" aria-hidden="true"></div>
+      <div class="hero__media reveal" data-reveal="right">
+        <div class="hero__frame">
+          <img src="assets/img/svc-homecare.jpg"
+            alt="Profissional de saúde da Vital Family atendendo paciente idosa com carinho no conforto do seu lar"
+            width="960" height="512" fetchpriority="high">
+        </div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <nav class="breadcrumb" aria-label="Trilha de navegação">
+            <a href="index.html">Início</a>
+            <span>/</span>
+            <a href="index.html#servicos">Nossos Serviços</a>
+            <span>/</span>
+            <strong aria-current="page">Home Care</strong>
+          </nav>
+          <span class="eyebrow">VITAL FAMILY • ASSISTÊNCIA DOMICILIAR</span>
+          <h1 class="hero__title">Cuidado humanizado, <span class="gold-text">no conforto do seu lar.</span></h1>
+          <p class="hero__lead">Levamos assistência profissional, ética e acolhedora até a casa da sua família, unindo
+            segurança técnica, presença humana e respeito à rotina de quem você ama.</p>
+          <div class="hero__actions">
+            <a href="#contato-homecare" class="btn btn--gold">
+              <svg class="ico">
+                <use href="#i-home-heart" />
+              </svg> Quero saber mais sobre Home Care
+            </a>
+          </div>
+          <p class="hero__safe"><svg class="ico ico--gold">
+              <use href="#i-shield" />
+            </svg> Assistência personalizada em domicílio com o padrão de qualidade Vital Family.</p>
+        </div>
+      </div>
+      <svg class="hero__swoosh" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="sw" x1="0" x2="1">
+            <stop offset="0" stop-color="#b8862c" />
+            <stop offset=".45" stop-color="#f6dc8e" />
+            <stop offset="1" stop-color="#c99a3d" />
+          </linearGradient>
+        </defs>
+        <path d="M0 52 C 380 92, 900 96, 1440 4 L1440 90 L0 90Z" fill="#081530" />
+        <path d="M0 52 C 380 92, 900 96, 1440 4" fill="none" stroke="url(#sw)" stroke-width="3.5" />
+      </svg>
+    </section>
+
+    <!-- ===== O QUE É HOME CARE / EXPLICAÇÃO ===== -->
+    <section class="about" id="sobre-homecare">
+      <div class="about__media reveal" data-reveal="left">
+        <img src="assets/img/svc-enfermagem.jpg"
+          alt="Profissional de enfermagem cuidando de paciente idosa em domicílio" loading="lazy" width="960"
+          height="512">
+      </div>
+      <div class="about__panel">
+        <div class="about__content reveal">
+          <span class="eyebrow">O QUE É HOME CARE</span>
+          <h2 class="about__title">Acolhimento profissional <span class="gold-text">perto da família</span></h2>
+          <p>O <strong>Home Care</strong> da Vital Family foi estruturado para oferecer assistência à saúde diretamente
+            na residência do paciente, preservando o convívio familiar, o bem-estar emocional e o conforto do lar.</p>
+          <p>A nossa missão é executar com excelência os nossos serviços com protocolos seguros, atendimento humanizado,
+            informações claras, participação da família em cada etapa do processo e conforto para todos os nossos
+            pacientes. O nosso lema é claro: Podemos possuir todos os procedimentos técnicos, mas, ao tocar uma alma
+            humana, seja apenas uma alma humana.</p>
+          <a href="#contato-homecare" class="btn btn--outline">Quero saber mais sobre Home Care <svg class="ico">
+              <use href="#i-arrow" />
+            </svg></a>
+        </div>
+        <ul class="about__list reveal">
+          <li><svg class="ico-lg">
+              <use href="#i-home-heart" />
+            </svg><span>Recuperação no<br> conforto de casa</span></li>
+          <li><svg class="ico-lg">
+              <use href="#i-heart-hands" />
+            </svg><span>Atendimento<br> humanizado e próximo</span></li>
+          <li><svg class="ico-lg">
+              <use href="#i-shield" />
+            </svg><span>Equipe qualificada<br> e de confiança</span></li>
+          <li><svg class="ico-lg">
+              <use href="#i-handshake" />
+            </svg><span>Apoio e orientação<br> contínua à família</span></li>
         </ul>
       </div>
+      <svg class="about__swoosh" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 44 L0 8 C 360 40, 960 42, 1440 16 L1440 44 Z" fill="#060f23" />
+        <path d="M0 8 C 360 40, 960 42, 1440 16" fill="none" stroke="url(#sw)" stroke-width="2.5" />
+      </svg>
+    </section>
 
-      <form class="vf-form reveal" id="form-homecare">
-        <div class="vf-form__head">
-          <h3>Formulário para Contato da Família</h3>
-          <p>Preencha os dados abaixo para falar com nossa equipe de Home Care.</p>
+    <!-- ===== COMO FUNCIONA O ATENDIMENTO ===== -->
+    <section class="steps-sec" id="como-funciona">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title section-title--line-right">Como Funciona o Atendimento</h2>
+          <p class="section-sub">Um processo claro, cuidadoso e pensado para acolher sua família desde o primeiro
+            contato.</p>
+        </header>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span class="step-card__num">01</span>
+            <div class="step-card__icon"><svg>
+                <use href="#i-phone" />
+              </svg></div>
+            <h3>Contato da Família</h3>
+            <p>Você entra em contato pelo formulário ou WhatsApp e compartilha o contexto e as necessidades de
+              assistência do familiar.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-card__num">02</span>
+            <div class="step-card__icon"><svg>
+                <use href="#i-stetho" />
+              </svg></div>
+            <h3>Entendimento das Necessidades</h3>
+            <p>Nossa equipe compreende a rotina, orientações médicas e o formato de assistência domiciliar mais
+              adequado.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-card__num">03</span>
+            <div class="step-card__icon"><svg>
+                <use href="#i-users" />
+              </svg></div>
+            <h3>Definição do Atendimento</h3>
+            <p>Organizamos o plano de Home Care e o acompanhamento multiprofissional conforme as necessidades alinhadas
+              com a família.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-card__num">04</span>
+            <div class="step-card__icon"><svg>
+                <use href="#i-home-heart" />
+              </svg></div>
+            <h3>Cuidado no Lar</h3>
+            <p>Iniciamos o atendimento em casa com responsabilidade, pontualidade, respeito e comunicação transparente
+              com os familiares.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARA QUEM É INDICADO & CUIDADOS OFERECIDOS ===== -->
+    <section class="services" id="indicacoes-e-cuidados">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title section-title--lines">Para Quem é Indicado</h2>
+          <p class="section-sub">Soluções em assistência domiciliar pensadas para diferentes momentos da vida.</p>
+        </header>
+
+        <div class="audience-grid audience-grid--3">
+          <article class="aud-card reveal">
+            <div class="aud-card__icon"><svg>
+                <use href="#i-shield" />
+              </svg></div>
+            <h3>Pacientes Acamados e com Uso de Dispositivos</h3>
+            <p>Pessoas com quadro clínico acamado e em uso de dispositivos — sejam sondas ou respiradores mecânicos — de
+              diferentes idades.</p>
+          </article>
+          <article class="aud-card reveal">
+            <div class="aud-card__icon"><svg>
+                <use href="#i-home-heart" />
+              </svg></div>
+            <h3>Reabilitação e Cuidados Pós-Cirúrgicos</h3>
+            <p>Pacientes em pós-cirurgia que precisam de fisioterapia, fonoaudiologia, acompanhamento nutricional ou
+              cuidado especializado de feridas.</p>
+          </article>
+          <article class="aud-card reveal">
+            <div class="aud-card__icon"><svg>
+                <use href="#i-stetho" />
+              </svg></div>
+            <h3>Enfermagem e Cuidador de Idosos</h3>
+            <p>Pacientes que necessitam de procedimentos e acompanhamento de técnico de enfermagem ou cuidador de idosos
+              no conforto do lar.</p>
+          </article>
         </div>
 
-        <div class="vf-form__grid">
-          <div class="vf-field">
-            <label for="hc-responsavel">Nome do responsável *</label>
-            <input type="text" id="hc-responsavel" name="responsavel" placeholder="Seu nome completo" required>
+        <!-- Cuidados e serviços efetivamente oferecidos -->
+        <div class="care-offer reveal">
+          <div class="care-offer__media">
+            <img src="assets/img/svc-humanizado.jpg"
+              alt="Atendimento humanizado e aferição de sinais vitais em domicílio" loading="lazy" width="960"
+              height="512">
           </div>
-
-          <div class="vf-field">
-            <label for="hc-whatsapp">WhatsApp *</label>
-            <input type="tel" id="hc-whatsapp" name="whatsapp" placeholder="(84) 99999-9999" required>
-          </div>
-
-          <div class="vf-field">
-            <label for="hc-cidade">Cidade / Bairro *</label>
-            <input type="text" id="hc-cidade" name="cidade" placeholder="Informe a cidade do atendimento" required>
-          </div>
-
-          <div class="vf-field">
-            <label for="hc-paciente">Nome ou idade do paciente (opcional)</label>
-            <input type="text" id="hc-paciente" name="paciente" placeholder="Ex.: Sr. João, 78 anos">
-          </div>
-
-          <div class="vf-field vf-field--full">
-            <label for="hc-necessidades">Descrição das necessidades de assistência *</label>
-            <textarea id="hc-necessidades" name="necessidades" rows="4" placeholder="Conte brevemente como podemos ajudar (ex.: cuidados pós-alta, Home Care, curativos, acompanhamento multiprofissional, etc.)" required></textarea>
+          <div class="care-offer__body">
+            <span class="eyebrow">NOSSAS SOLUÇÕES EM SAÚDE</span>
+            <h3>Cuidados e Serviços Oferecidos pela <span class="gold-text">Vital Family</span></h3>
+            <p>Atuamos de forma integrada dentro do escopo institucional da Vital Family, oferecendo suporte confiável
+              para o cuidado domiciliar e a continuidade da assistência:</p>
+            <ul class="care-offer__list">
+              <li><svg>
+                  <use href="#i-home-heart" />
+                </svg>
+                <div><strong>Home Care:</strong> Assistência personalizada no conforto do lar, com atendimento
+                  programado e acompanhamento próximo da evolução do paciente.</div>
+              </li>
+              <li><svg>
+                  <use href="#i-stetho" />
+                </svg>
+                <div><strong>Serviços de Equipe Multiprofissional:</strong> Cuidados profissionais de enfermagem,
+                  nutrição, médico, fonoaudiólogo, fisioterapeuta, assistência social, dentista, terapeuta ocupacional,
+                  aferição e monitoramento de sinais vitais, administração de medicamentos conforme prescrição médica,
+                  curativos e cuidados gerais de higiene e conforto.</div>
+              </li>
+              <li><svg>
+                  <use href="#i-heart-pulse" />
+                </svg>
+                <div><strong>Atendimento Humanizado à Família:</strong> Escuta ativa, orientação aos familiares sobre a
+                  rotina de cuidados e dedicação em cada detalhe do atendimento.</div>
+              </li>
+              <li><svg>
+                  <use href="#i-ambulance" />
+                </svg>
+                <div><strong>Nosso diferencial:</strong> Quando o paciente em Home Care precisa realizar exames,
+                  consultas ou transferências, contamos com estrutura própria de transporte assistido.</div>
+              </li>
+            </ul>
+            <a href="#contato-homecare" class="btn btn--gold">
+              <svg class="ico">
+                <use href="#i-whatsapp" />
+              </svg> Quero saber mais sobre Home Care
+            </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <button type="submit" class="btn btn--gold vf-form__submit">
-          <svg class="ico"><use href="#i-whatsapp"/></svg> Quero saber mais sobre Home Care
-        </button>
-        <small class="vf-form__disclaimer">Você será redirecionado para o WhatsApp oficial da Vital Family com as informações preenchidas.</small>
-      </form>
+    <!-- ===== DÚVIDAS FREQUENTES (FAQ) ===== -->
+    <section class="faq-sec" id="duvidas">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title section-title--line-right">Dúvidas Frequentes</h2>
+          <p class="section-sub">Respostas claras para ajudar sua família a entender como funciona o nosso atendimento
+            domiciliar.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>Como solicitar uma avaliação para Home Care? <svg class="faq-ico">
+                <use href="#i-chev" />
+              </svg></summary>
+            <div class="faq-body">
+              <p>Basta preencher o formulário abaixo ou clicar no botão do WhatsApp. Nossa equipe conversará com o
+                responsável familiar para compreender o quadro do paciente, a cidade de atendimento e os cuidados
+                necessários, orientando os próximos passos.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso contratar tanto atendimentos pontuais quanto acompanhamento contínuo? <svg class="faq-ico">
+                <use href="#i-chev" />
+              </svg></summary>
+            <div class="faq-body">
+              <p>Sim. A Vital Family organiza o atendimento de acordo com a necessidade de cada família — seja através
+                de procedimentos específicos ou por meio de planos personalizados de assistência domiciliar (Home Care).
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Se o paciente em Home Care precisar ir ao hospital ou fazer exames, a Vital Family apoia? <svg
+                class="faq-ico">
+                <use href="#i-chev" />
+              </svg></summary>
+            <div class="faq-body">
+              <p>Sim! Um dos grandes diferenciais da Vital Family é contar também com o serviço de <strong>Transporte de
+                  Pacientes</strong> e locação de ambulâncias, oferecendo suporte seguro caso o paciente precise se
+                deslocar para exames, consultas ou unidades hospitalares.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMULÁRIO PARA CONTATO DA FAMÍLIA ===== -->
+    <section class="form-sec" id="contato-homecare">
+      <div class="container form-sec__inner">
+        <div class="form-sec__info reveal">
+          <span class="eyebrow">FALE COM NOSSA EQUIPE</span>
+          <h2 class="about__title">Quero saber mais sobre <span class="gold-text">Home Care</span></h2>
+          <p>Conte-nos um pouco sobre a necessidade do seu familiar. Ao enviar o formulário ao lado, suas informações
+            serão organizadas em uma mensagem direta para o WhatsApp oficial da Vital Family.</p>
+
+          <div class="notice-box">
+            <svg class="ico-lg">
+              <use href="#i-heart-hands" />
+            </svg>
+            <div>
+              <strong>Atendimento Humanizado e Personalizado</strong>
+              <p>Cada família possui uma rotina única. Nossa equipe receberá sua mensagem e retornará com atenção para
+                orientar a melhor forma de assistência domiciliar na sua região.</p>
+            </div>
+          </div>
+
+          <ul class="contact__info contact__info--clean">
+            <li>
+              <svg class="ico-md">
+                <use href="#i-phone" />
+              </svg>
+              <span><small>Central de Atendimento / WhatsApp</small><a href="tel:+5584998409453">(84)
+                  99840-9453</a></span>
+            </li>
+            <li>
+              <svg class="ico-md">
+                <use href="#i-pin" />
+              </svg>
+              <span><small>Atendemos toda Natal e região metropolitana</small>R. Henrique Dias, 224 - Bom Pastor, Natal
+                - RN, 59060-170</span>
+            </li>
+            <li>
+              <svg class="ico-md">
+                <use href="#i-mail" />
+              </svg>
+              <span><a href="mailto:administrativo@vfas.com.br">administrativo@vfas.com.br</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="vf-form reveal" id="form-homecare">
+          <div class="vf-form__head">
+            <h3>Formulário para Contato da Família</h3>
+            <p>Preencha os dados abaixo para falar com nossa equipe de Home Care.</p>
+          </div>
+
+          <div class="vf-form__grid">
+            <div class="vf-field">
+              <label for="hc-responsavel">Nome do responsável *</label>
+              <input type="text" id="hc-responsavel" name="responsavel" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="vf-field">
+              <label for="hc-whatsapp">WhatsApp *</label>
+              <input type="tel" id="hc-whatsapp" name="whatsapp" placeholder="(84) 99999-9999" inputmode="tel" autocomplete="tel" minlength="14" maxlength="15" required>
+            </div>
+
+            <div class="vf-field">
+              <label for="hc-cidade">Cidade / Bairro *</label>
+              <input type="text" id="hc-cidade" name="cidade" placeholder="Informe a cidade do atendimento" required>
+            </div>
+
+            <div class="vf-field">
+              <label for="hc-paciente">Nome ou idade do paciente (opcional)</label>
+              <input type="text" id="hc-paciente" name="paciente" placeholder="Ex.: Sr. João, 78 anos">
+            </div>
+
+            <div class="vf-field vf-field--full">
+              <label for="hc-necessidades">Descrição das necessidades de assistência *</label>
+              <textarea id="hc-necessidades" name="necessidades" rows="4"
+                placeholder="Conte brevemente como podemos ajudar (ex.: cuidados pós-alta, Home Care, curativos, acompanhamento multiprofissional, etc.)"
+                required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--gold vf-form__submit">
+            <svg class="ico">
+              <use href="#i-whatsapp" />
+            </svg> Quero saber mais sobre Home Care
+          </button>
+          <small class="vf-form__disclaimer">Você será redirecionado para o WhatsApp oficial da Vital Family com as
+            informações preenchidas.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="brand brand--footer" aria-label="Vital Family - voltar ao início">
+        <img src="assets/logo.jpeg" alt="Logotipo Vital Family" class="brand__logo" width="72" height="72"
+          loading="lazy">
+        <span class="brand__text"><strong>VITAL FAMILY</strong><small>ASSISTÊNCIA EM SAÚDE</small></span>
+      </a>
+      <nav class="footer__nav" aria-label="Links do rodapé">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre Nós</a>
+        <a href="remocao-de-pacientes.html">Transporte de Pacientes</a>
+        <a href="locacao-de-ambulancias.html">Locação de Ambulâncias</a>
+        <a href="home-care.html">Home Care</a>
+        <a href="assistencia-em-eventos.html">Assistência em Eventos</a>
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#novembro-azul">Novembro Azul</a>
+        <a href="index.html#depoimentos">Depoimentos</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+          aria-label="Instagram da Vital Family"><svg>
+            <use href="#i-instagram" />
+          </svg></a>
+      </div>
+      <div class="footer__motto">
+        <span class="script-gold">Sua saúde em boas mãos.</span>
+        <svg class="swash" viewBox="0 0 260 22" aria-hidden="true">
+          <path d="M4 18 C 80 4, 180 2, 256 8" fill="none" stroke="url(#gold)" stroke-width="3"
+            stroke-linecap="round" />
+        </svg>
+      </div>
     </div>
-  </section>
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <a href="index.html" class="brand brand--footer" aria-label="Vital Family - voltar ao início">
-      <img src="assets/logo.jpeg" alt="Logotipo Vital Family" class="brand__logo" width="72" height="72" loading="lazy">
-      <span class="brand__text"><strong>VITAL FAMILY</strong><small>ASSISTÊNCIA EM SAÚDE</small></span>
-    </a>
-    <nav class="footer__nav" aria-label="Links do rodapé">
-      <a href="index.html#inicio">Início</a>
-      <a href="index.html#sobre">Sobre Nós</a>
-      <a href="remocao-de-pacientes.html">Transporte de Pacientes</a>
-      <a href="locacao-de-ambulancias.html">Locação de Ambulâncias</a>
-      <a href="home-care.html">Home Care</a>
-      <a href="assistencia-em-eventos.html">Assistência em Eventos</a>
-      <a href="index.html#diferenciais">Diferenciais</a>
-      <a href="index.html#novembro-azul">Novembro Azul</a>
-      <a href="index.html#depoimentos">Depoimentos</a>
-      <a href="index.html#contato">Contato</a>
-    </nav>
-    <div class="footer__social">
-      <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener" aria-label="Instagram da Vital Family"><svg><use href="#i-instagram"/></svg></a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook da Vital Family"><svg><use href="#i-facebook"/></svg></a>
+    <div class="footer__meta">
+      <p class="footer__copy">© <span id="year"></span> Vital Family — Assistência em Saúde • CNPJ: 45.951.629/0001-55 •
+        R. Henrique Dias, 224 - Bom Pastor, Natal - RN, 59060-170. Todos os direitos reservados.</p>
+      <p class="footer__credit">Desenvolvido por <strong>Ag Command.</strong></p>
     </div>
-    <div class="footer__motto">
-      <span class="script-gold">Sua saúde em boas mãos.</span>
-      <svg class="swash" viewBox="0 0 260 22" aria-hidden="true"><path d="M4 18 C 80 4, 180 2, 256 8" fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/></svg>
-    </div>
-  </div>
-  <div class="footer__meta">
-    <p class="footer__copy">© <span id="year"></span> Vital Family — Assistência em Saúde • CNPJ: 45.951.629/0001-55 • R. Henrique Dias, 224 - Bom Pastor, Natal - RN, 59060-170. Todos os direitos reservados.</p>
-    <p class="footer__credit">Desenvolvido por <strong>Ag Command.</strong></p>
-  </div>
-</footer>
+  </footer>
 
-<a href="index.html#novembro-azul" class="nov-float-tab" aria-label="A importância do Novembro Azul">
-  <svg><use href="#i-ribbon"/></svg>
-  <span>Novembro Azul</span>
-</a>
+  <a href="index.html#novembro-azul" class="nov-float-tab" aria-label="A importância do Novembro Azul">
+    <svg>
+      <use href="#i-ribbon" />
+    </svg>
+    <span>Novembro Azul</span>
+  </a>
 
-<a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+    aria-label="Conversar no WhatsApp"><svg>
+      <use href="#i-whatsapp" />
+    </svg></a>
 
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
-</html>
 
+</html>
