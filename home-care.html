@@ -8,6 +8,8 @@
   <meta name="description"
     content="Cuidado humanizado no conforto do seu lar. Conheça o serviço de Home Care e Equipe Multiprofissional da Vital Family.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Home Care | Vital Family — Assistência em Saúde">
@@ -147,6 +149,9 @@
       <path fill="currentColor"
         d="M12 2c-3.1 0-5.6 2.4-5.6 5.4 0 2.1 1.3 4.3 3.2 6.6L6 21.3l3.1 1.2 2.9-5.8 2.9 5.8 3.1-1.2-3.6-7.3c1.9-2.3 3.2-4.5 3.2-6.6C17.6 4.4 15.1 2 12 2Zm0 3c1.5 0 2.6 1.1 2.6 2.4 0 1.2-.9 2.8-2.6 4.8-1.7-2-2.6-3.6-2.6-4.8C9.4 6.1 10.5 5 12 5Z" />
     </symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z" />
+    </symbol>
   </svg>
 
   <!-- ===== HEADER ===== -->
@@ -181,6 +186,9 @@
               <li><a href="assistencia-em-eventos.html"><svg>
                     <use href="#i-heart-pulse" />
                   </svg> Assistência em Eventos</a></li>
+              <li><a href="servicos-de-enfermagem.html"><svg>
+                    <use href="#i-cross" />
+                  </svg> Serviços de Enfermagem</a></li>
               <li><a href="index.html#servicos"><svg>
                     <use href="#i-stetho" />
                   </svg> Ver todos os serviços</a></li>
@@ -532,7 +540,7 @@
           <div class="vf-form__grid">
             <div class="vf-field">
               <label for="hc-responsavel">Nome do responsável *</label>
-              <input type="text" id="hc-responsavel" name="responsavel" placeholder="Seu nome completo" required>
+              <input type="text" id="hc-responsavel" name="responsavel" placeholder="Seu nome completo" maxlength="120" required>
             </div>
 
             <div class="vf-field">
@@ -542,17 +550,17 @@
 
             <div class="vf-field">
               <label for="hc-cidade">Cidade / Bairro *</label>
-              <input type="text" id="hc-cidade" name="cidade" placeholder="Informe a cidade do atendimento" required>
+              <input type="text" id="hc-cidade" name="cidade" placeholder="Informe a cidade do atendimento" maxlength="140" required>
             </div>
 
             <div class="vf-field">
               <label for="hc-paciente">Nome ou idade do paciente (opcional)</label>
-              <input type="text" id="hc-paciente" name="paciente" placeholder="Ex.: Sr. João, 78 anos">
+              <input type="text" id="hc-paciente" name="paciente" placeholder="Ex.: Sr. João, 78 anos" maxlength="120">
             </div>
 
             <div class="vf-field vf-field--full">
               <label for="hc-necessidades">Descrição das necessidades de assistência *</label>
-              <textarea id="hc-necessidades" name="necessidades" rows="4"
+              <textarea id="hc-necessidades" name="necessidades" rows="4" maxlength="600"
                 placeholder="Conte brevemente como podemos ajudar (ex.: cuidados pós-alta, Home Care, curativos, acompanhamento multiprofissional, etc.)"
                 required></textarea>
             </div>
@@ -585,13 +593,14 @@
         <a href="locacao-de-ambulancias.html">Locação de Ambulâncias</a>
         <a href="home-care.html">Home Care</a>
         <a href="assistencia-em-eventos.html">Assistência em Eventos</a>
+        <a href="servicos-de-enfermagem.html">Serviços de Enfermagem</a>
         <a href="index.html#diferenciais">Diferenciais</a>
         <a href="index.html#novembro-azul">Novembro Azul</a>
         <a href="index.html#depoimentos">Depoimentos</a>
         <a href="index.html#contato">Contato</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
           aria-label="Instagram da Vital Family"><svg>
             <use href="#i-instagram" />
           </svg></a>
@@ -618,7 +627,7 @@
     <span>Novembro Azul</span>
   </a>
 
-  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar no WhatsApp"><svg>
       <use href="#i-whatsapp" />
     </svg></a>

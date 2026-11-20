@@ -8,6 +8,8 @@
   <meta name="description"
     content="Assistência em Eventos: apoio ambulatorial em uma diversidade de eventos com equipe especializada e ambulâncias equipadas da Vital Family.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Assistência em Eventos | Vital Family — Assistência em Saúde">
@@ -245,7 +247,7 @@
               </svg> Solicitar cobertura para evento
             </a>
             <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Assist%C3%AAncia%20em%20Eventos."
-              target="_blank" rel="noopener" class="btn btn--outline">
+              target="_blank" rel="noopener noreferrer" class="btn btn--outline">
               <svg class="ico">
                 <use href="#i-whatsapp" />
               </svg> Falar no WhatsApp
@@ -397,7 +399,7 @@
           <div class="vf-form__grid">
             <div class="vf-field">
               <label for="ev-responsavel">Nome ou Organização *</label>
-              <input type="text" id="ev-responsavel" name="responsavel" placeholder="Seu nome, empresa ou produtora"
+              <input type="text" id="ev-responsavel" name="responsavel" placeholder="Seu nome, empresa ou produtora" maxlength="120"
                 required>
             </div>
 
@@ -422,22 +424,22 @@
 
             <div class="vf-field">
               <label for="ev-publico">Público estimado *</label>
-              <input type="text" id="ev-publico" name="publico" placeholder="Ex.: 300 pessoas, 2.000 pessoas" required>
+              <input type="text" id="ev-publico" name="publico" placeholder="Ex.: 300 pessoas, 2.000 pessoas" maxlength="100" required>
             </div>
 
             <div class="vf-field">
               <label for="ev-data">Data e horário do evento *</label>
-              <input type="text" id="ev-data" name="data" placeholder="Ex.: 20/12 das 18h às 02h" required>
+              <input type="text" id="ev-data" name="data" placeholder="Ex.: 20/12 das 18h às 02h" maxlength="120" required>
             </div>
 
             <div class="vf-field">
               <label for="ev-local">Cidade / Local do evento *</label>
-              <input type="text" id="ev-local" name="local" placeholder="Informe a cidade e o espaço" required>
+              <input type="text" id="ev-local" name="local" placeholder="Informe a cidade e o espaço" maxlength="160" required>
             </div>
 
             <div class="vf-field vf-field--full">
               <label for="ev-obs">Observações sobre a estrutura necessária (opcional)</label>
-              <textarea id="ev-obs" name="obs" rows="2"
+              <textarea id="ev-obs" name="obs" rows="2" maxlength="500"
                 placeholder="Ex.: necessidade de posto médico/apoio ambulatorial, ambulância no local, etc."></textarea>
             </div>
           </div>
@@ -476,7 +478,7 @@
         <a href="index.html#contato">Contato</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
           aria-label="Instagram da Vital Family"><svg>
             <use href="#i-instagram" />
           </svg></a>
@@ -503,7 +505,7 @@
     <span>Novembro Azul</span>
   </a>
 
-  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar no WhatsApp"><svg>
       <use href="#i-whatsapp" />
     </svg></a>

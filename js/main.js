@@ -1,11 +1,11 @@
 (function () {
   'use strict';
 
-  // Current year in footer
+  // Ano atual automático no rodapé
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Header scroll state & active nav link
+  // Cabeçalho fixo, menu mobile e scroll spy
   const header = document.getElementById('header');
   const nav = document.getElementById('nav');
   const burger = document.getElementById('burger');
@@ -39,9 +39,7 @@
   }
 
   allMenuLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      closeMenu();
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   document.addEventListener('keydown', (e) => {
@@ -54,7 +52,6 @@
       header.classList.toggle('is-scrolled', y > 24);
     }
 
-    // Scroll spy (only when page has matching in-page sections, e.g. index.html)
     if (sections.length > 1) {
       const probe = y + (header ? header.offsetHeight : 86) + 120;
       let activeId = sections[0] ? sections[0].id : '';
@@ -72,7 +69,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Reveal on scroll
+  // Animações discretas ao rolar a página
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(
@@ -84,14 +81,14 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -24px 0px' }
     );
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // Testimonials Carousel (infinite loop + responsive per-view + dots + swipe)
+  // Carrossel de Depoimentos (loop contínuo, setas, indicadores e swipe mobile)
   const carousel = document.getElementById('carousel');
   if (carousel) {
     const viewport = carousel.querySelector('.carousel__viewport');
@@ -102,7 +99,6 @@
     const origCards = Array.from(track.children);
     const total = origCards.length;
 
-    // Duplicate cards for seamless cycling when scrolling past 1st/last even on desktop (3 per view)
     origCards.forEach((card) => {
       const clone = card.cloneNode(true);
       clone.setAttribute('aria-hidden', 'true');
@@ -112,7 +108,6 @@
     let index = 0;
     let timer = null;
 
-    // Build dots (3 dots matching the reference image)
     const dots = origCards.map((_, i) => {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -181,9 +176,11 @@
       stopAuto();
       timer = setInterval(next, 6000);
     }
+
     function stopAuto() {
       if (timer) clearInterval(timer);
     }
+
     function restartAuto() {
       stopAuto();
       startAuto();
@@ -195,7 +192,6 @@
     carousel.addEventListener('mouseenter', stopAuto);
     carousel.addEventListener('mouseleave', startAuto);
 
-    // Touch / pointer swipe
     let startX = 0;
     let deltaX = 0;
     let dragging = false;
@@ -227,28 +223,89 @@
     startAuto();
   }
 
-  // Novembro Azul interactive tabs
-  const tabButtons = document.querySelectorAll('.nov-tabs__btn');
+  // Abas interativas — Novembro Azul (com suporte a teclado)
+  const tabButtons = Array.from(document.querySelectorAll('.nov-tabs__btn'));
   const tabPanels = document.querySelectorAll('.nov-tabs__panel');
   if (tabButtons.length && tabPanels.length) {
-    tabButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('aria-controls');
-        tabButtons.forEach((b) => {
-          const active = b === btn;
-          b.classList.toggle('is-active', active);
-          b.setAttribute('aria-selected', String(active));
-        });
-        tabPanels.forEach((panel) => {
-          const active = panel.id === targetId;
-          panel.classList.toggle('is-active', active);
-          panel.hidden = !active;
-        });
+    function activateTab(btn) {
+      const targetId = btn.getAttribute('aria-controls');
+      tabButtons.forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      tabPanels.forEach((panel) => {
+        const active = panel.id === targetId;
+        panel.classList.toggle('is-active', active);
+        panel.hidden = !active;
+      });
+    }
+
+    tabButtons.forEach((btn, idx) => {
+      btn.addEventListener('click', () => activateTab(btn));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const dir = e.key === 'ArrowRight' ? 1 : -1;
+          const nextBtn = tabButtons[(idx + dir + tabButtons.length) % tabButtons.length];
+          nextBtn.focus();
+          activateTab(nextBtn);
+        }
       });
     });
   }
 
-  // Minimum date today on date inputs
+  // Abas interativas — Módulo de Enfermagem (com suporte a teclado)
+  const enfTabButtons = Array.from(document.querySelectorAll('.nursing-tab__btn'));
+  const enfTabPanels = document.querySelectorAll('.nursing-panel');
+  if (enfTabButtons.length && enfTabPanels.length) {
+    function activateEnfTab(btn) {
+      const targetId = btn.getAttribute('aria-controls');
+      enfTabButtons.forEach((b) => {
+        const active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      enfTabPanels.forEach((panel) => {
+        const active = panel.id === targetId;
+        panel.classList.toggle('is-active', active);
+        panel.hidden = !active;
+      });
+    }
+
+    enfTabButtons.forEach((btn, idx) => {
+      btn.addEventListener('click', () => activateEnfTab(btn));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const dir = e.key === 'ArrowRight' ? 1 : -1;
+          const nextBtn = enfTabButtons[(idx + dir + enfTabButtons.length) % enfTabButtons.length];
+          nextBtn.focus();
+          activateEnfTab(nextBtn);
+        }
+      });
+    });
+  }
+
+  // Máscara automática para campos de Telefone / WhatsApp
+  const telInputs = document.querySelectorAll('input[type="tel"]');
+  telInputs.forEach((input) => {
+    input.addEventListener('input', () => {
+      let digits = input.value.replace(/\D/g, '').slice(0, 11);
+      if (digits.length > 6) {
+        const split = digits.length === 11 ? 7 : 6;
+        input.value = `(${digits.slice(0, 2)}) ${digits.slice(2, split)}-${digits.slice(split)}`;
+      } else if (digits.length > 2) {
+        input.value = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+      } else if (digits.length > 0) {
+        input.value = `(${digits}`;
+      } else {
+        input.value = '';
+      }
+    });
+  });
+
+  // Data mínima hoje nos campos de data
   const dateInputs = document.querySelectorAll('input[type="date"]');
   if (dateInputs.length) {
     const today = new Date().toISOString().split('T')[0];
@@ -263,21 +320,39 @@
     return `${d}/${m}/${y}`;
   }
 
+  function cleanField(val, max = 300) {
+    return (val || '')
+      .toString()
+      .replace(/[\u0000-\u001F\u007F]/g, ' ')
+      .trim()
+      .slice(0, max);
+  }
+
+  function openWhatsApp(lines) {
+    const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
+    const win = window.open(url, '_blank', 'noopener,noreferrer');
+    if (win) win.opener = null;
+  }
+
   // Formulário 1: Transporte de Pacientes -> WhatsApp
   const formRemocao = document.getElementById('form-remocao');
   if (formRemocao) {
     formRemocao.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!formRemocao.checkValidity()) {
+        formRemocao.reportValidity();
+        return;
+      }
       const fd = new FormData(formRemocao);
-      const quem = (fd.get('quem') || '').toString().trim();
-      const mobilidade = (fd.get('mobilidade') || '').toString().trim();
-      const origem = (fd.get('origem') || '').toString().trim();
-      const destino = (fd.get('destino') || '').toString().trim();
-      const data = formatDateBR((fd.get('data') || '').toString().trim());
-      const acompanhamento = (fd.get('acompanhamento') || '').toString().trim();
-      const responsavel = (fd.get('responsavel') || '').toString().trim();
-      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
-      const obs = (fd.get('obs') || '').toString().trim();
+      const quem = cleanField(fd.get('quem'), 120);
+      const mobilidade = cleanField(fd.get('mobilidade'), 120);
+      const origem = cleanField(fd.get('origem'), 200);
+      const destino = cleanField(fd.get('destino'), 200);
+      const data = formatDateBR(cleanField(fd.get('data'), 20));
+      const acompanhamento = cleanField(fd.get('acompanhamento'), 140);
+      const responsavel = cleanField(fd.get('responsavel'), 120);
+      const whatsapp = cleanField(fd.get('whatsapp'), 25);
+      const obs = cleanField(fd.get('obs'), 500);
 
       const lines = [
         'Olá, equipe *Vital Family*! Gostaria de solicitar a avaliação para um *Transporte de Paciente*:',
@@ -296,8 +371,7 @@
       }
       lines.push('', 'Aguardo a validação de disponibilidade e orientações da equipe. Obrigado(a)!');
 
-      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
+      openWhatsApp(lines);
     });
   }
 
@@ -306,12 +380,16 @@
   if (formHomeCare) {
     formHomeCare.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!formHomeCare.checkValidity()) {
+        formHomeCare.reportValidity();
+        return;
+      }
       const fd = new FormData(formHomeCare);
-      const responsavel = (fd.get('responsavel') || '').toString().trim();
-      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
-      const cidade = (fd.get('cidade') || '').toString().trim();
-      const paciente = (fd.get('paciente') || '').toString().trim();
-      const necessidades = (fd.get('necessidades') || '').toString().trim();
+      const responsavel = cleanField(fd.get('responsavel'), 120);
+      const whatsapp = cleanField(fd.get('whatsapp'), 25);
+      const cidade = cleanField(fd.get('cidade'), 140);
+      const paciente = cleanField(fd.get('paciente'), 120);
+      const necessidades = cleanField(fd.get('necessidades'), 600);
 
       const lines = [
         'Olá, equipe *Vital Family*! Quero saber mais sobre o atendimento de *Home Care*:',
@@ -326,8 +404,7 @@
       lines.push(`• *Necessidades de assistência:* ${necessidades}`);
       lines.push('', 'Aguardo o retorno da equipe para orientação. Obrigado(a)!');
 
-      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
+      openWhatsApp(lines);
     });
   }
 
@@ -336,13 +413,17 @@
   if (formLocacao) {
     formLocacao.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!formLocacao.checkValidity()) {
+        formLocacao.reportValidity();
+        return;
+      }
       const fd = new FormData(formLocacao);
-      const responsavel = (fd.get('responsavel') || '').toString().trim();
-      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
-      const finalidade = (fd.get('finalidade') || '').toString().trim();
-      const periodo = (fd.get('periodo') || '').toString().trim();
-      const cidade = (fd.get('cidade') || '').toString().trim();
-      const obs = (fd.get('obs') || '').toString().trim();
+      const responsavel = cleanField(fd.get('responsavel'), 120);
+      const whatsapp = cleanField(fd.get('whatsapp'), 25);
+      const finalidade = cleanField(fd.get('finalidade'), 140);
+      const periodo = cleanField(fd.get('periodo'), 120);
+      const cidade = cleanField(fd.get('cidade'), 160);
+      const obs = cleanField(fd.get('obs'), 500);
 
       const lines = [
         'Olá, equipe *Vital Family*! Gostaria de solicitar um orçamento para *Locação de Ambulância*:',
@@ -358,8 +439,7 @@
       }
       lines.push('', 'Aguardo o retorno da equipe comercial. Obrigado(a)!');
 
-      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
+      openWhatsApp(lines);
     });
   }
 
@@ -368,14 +448,18 @@
   if (formEventos) {
     formEventos.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!formEventos.checkValidity()) {
+        formEventos.reportValidity();
+        return;
+      }
       const fd = new FormData(formEventos);
-      const responsavel = (fd.get('responsavel') || '').toString().trim();
-      const whatsapp = (fd.get('whatsapp') || '').toString().trim();
-      const tipo = (fd.get('tipo') || '').toString().trim();
-      const publico = (fd.get('publico') || '').toString().trim();
-      const data = (fd.get('data') || '').toString().trim();
-      const local = (fd.get('local') || '').toString().trim();
-      const obs = (fd.get('obs') || '').toString().trim();
+      const responsavel = cleanField(fd.get('responsavel'), 120);
+      const whatsapp = cleanField(fd.get('whatsapp'), 25);
+      const tipo = cleanField(fd.get('tipo'), 140);
+      const publico = cleanField(fd.get('publico'), 100);
+      const data = cleanField(fd.get('data'), 120);
+      const local = cleanField(fd.get('local'), 160);
+      const obs = cleanField(fd.get('obs'), 500);
 
       const lines = [
         'Olá, equipe *Vital Family*! Gostaria de solicitar um orçamento de *Assistência em Eventos (Apoio Ambulatorial)*:',
@@ -392,9 +476,41 @@
       }
       lines.push('', 'Aguardo o retorno da equipe para alinhamento da cobertura. Obrigado(a)!');
 
-      const url = 'https://wa.me/5584998409453?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
+      openWhatsApp(lines);
     });
   }
-})();
 
+  // Formulário 5: Serviços de Enfermagem -> WhatsApp
+  const formEnfMini = document.getElementById('form-enfermagem-mini');
+  const formEnfFull = document.getElementById('form-enfermagem');
+  [formEnfMini, formEnfFull].filter(Boolean).forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const fd = new FormData(form);
+      const nome = cleanField(fd.get('nome') || fd.get('responsavel'), 120);
+      const whatsapp = cleanField(fd.get('whatsapp'), 25);
+      const servico = cleanField(fd.get('servico'), 140);
+      const local = cleanField(fd.get('local') || fd.get('cidade'), 160);
+      const obs = cleanField(fd.get('obs') || fd.get('necessidades'), 500);
+
+      const lines = [
+        'Olá, equipe *Vital Family*! Gostaria de solicitar atendimento de *Serviços de Enfermagem*:',
+        '',
+        `• *Nome / Solicitante:* ${nome}`,
+        `• *Telefone / WhatsApp:* ${whatsapp}`,
+        `• *Serviço de interesse:* ${servico}`,
+        `• *Local / Bairro ou Empresa:* ${local}`,
+      ];
+      if (obs) {
+        lines.push(`• *Detalhes / Observações:* ${obs}`);
+      }
+      lines.push('', 'Aguardo as orientações e disponibilidade da equipe técnica. Obrigado(a)!');
+
+      openWhatsApp(lines);
+    });
+  });
+})();

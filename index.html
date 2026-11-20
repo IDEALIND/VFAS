@@ -8,6 +8,8 @@
   <meta name="description"
     content="A Vital Family oferece soluções completas em assistência à saúde em Natal e região metropolitana: transporte de pacientes, locação de ambulâncias, Home Care e assistência em eventos.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Vital Family | Assistência em Saúde">
@@ -20,85 +22,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Great+Vibes&family=Kaushan+Script&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=2.1">
-  <style>
-    /* Força os 5 cards de serviços estritamente lado a lado em 1 linha */
-    .services .container {
-      max-width: 1440px !important;
-      padding-inline: 20px;
-    }
-    .services__grid {
-      display: grid !important;
-      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-      gap: 16px !important;
-      align-items: stretch;
-    }
-    .svc-card {
-      padding: 0 0 22px !important;
-      height: 100% !important;
-    }
-    .svc-card__icon {
-      width: 48px !important;
-      height: 48px !important;
-      margin-top: -24px !important;
-      margin-bottom: 12px !important;
-    }
-    .svc-card__icon svg {
-      width: 24px !important;
-      height: 24px !important;
-    }
-    .svc-card h3 {
-      font-family: var(--font-head);
-      font-weight: 700;
-      font-size: clamp(0.92rem, 1.05vw, 1.04rem) !important;
-      line-height: 1.25 !important;
-      margin-bottom: 8px !important;
-      padding-inline: 8px !important;
-      min-height: 2.5em !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    .svc-card p {
-      font-size: clamp(0.78rem, 0.88vw, 0.85rem) !important;
-      line-height: 1.45 !important;
-      padding-inline: 10px !important;
-      max-width: 100% !important;
-    }
-    .svc-card__more {
-      padding-top: 14px !important;
-      font-size: 0.8rem !important;
-    }
-    @media (max-width: 1280px) {
-      .services__grid { gap: 14px !important; }
-      .svc-card h3 { font-size: 0.94rem !important; }
-    }
-    @media (max-width: 1100px) {
-      .services .container { max-width: 100% !important; padding-inline: 14px !important; }
-      .services__grid { gap: 10px !important; }
-    }
-    @media (max-width: 900px) {
-      .services .container { padding-inline: 0 !important; }
-      .services .section-head { padding-inline: 24px !important; }
-      .services__grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        gap: 16px !important;
-        padding: 10px 24px 28px !important;
-        scrollbar-width: thin !important;
-        scrollbar-color: var(--gold-500) transparent !important;
-      }
-      .services__grid::-webkit-scrollbar { height: 6px; }
-      .services__grid::-webkit-scrollbar-thumb { background: var(--gold-500); border-radius: 4px; }
-      .services__grid .svc-card {
-        flex: 0 0 240px !important;
-        scroll-snap-align: start !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -312,7 +236,7 @@
           <li><a href="#contato" class="nav__link">Contato</a></li>
         </ul>
         <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Vital%20Family."
-          target="_blank" rel="noopener" class="btn btn--gold btn--sm nav__cta">
+          target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--sm nav__cta">
           <svg class="ico">
             <use href="#i-whatsapp" />
           </svg> Fale Conosco
@@ -342,7 +266,7 @@
           <h1 class="hero__title">Cuidado, segurança<br> e bem-estar <span class="gold-text">em todas<br> as fases da
               vida.</span></h1>
           <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20atendimento."
-            target="_blank" rel="noopener" class="btn btn--gold">
+            target="_blank" rel="noopener noreferrer" class="btn btn--gold">
             <svg class="ico">
               <use href="#i-whatsapp" />
             </svg> Solicite um atendimento
@@ -550,7 +474,7 @@
           <p>Somos uma empresa especializada em assistência à saúde, atuando com responsabilidade, dedicação e respeito
             em cada atendimento. Nosso propósito é cuidar de pessoas, proporcionando mais qualidade de vida,
             tranquilidade e bem-estar para você e sua família.</p>
-          <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+          <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
             class="btn btn--outline">Conheça mais sobre nós <svg class="ico">
               <use href="#i-arrow" />
             </svg></a>
@@ -733,7 +657,7 @@
           <h2 class="section-title section-title--dark section-title--lines">Depoimentos</h2>
           <p class="section-sub section-sub--dark">A confiança de quem já foi atendido é a nossa maior motivação.</p>
           <a href="https://www.google.com/maps/place/Vital+Family+Home+Care/@-5.813789,-35.2389146,17z" target="_blank"
-            rel="noopener" class="g-rating-badge" aria-label="Avaliação 5.0 estrelas no Google Maps">
+            rel="noopener noreferrer" class="g-rating-badge" aria-label="Avaliação 5.0 estrelas no Google Maps">
             <span class="g-rating-badge__score">5.0</span>
             <span class="stars" aria-hidden="true"><svg>
                 <use href="#i-star-fill" />
@@ -1002,7 +926,7 @@
           <h2>Fale Conosco</h2>
           <p>Estamos prontos para atender você!</p>
           <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
-            target="_blank" rel="noopener" class="btn btn--gold">
+            target="_blank" rel="noopener noreferrer" class="btn btn--gold">
             <svg class="ico">
               <use href="#i-whatsapp" />
             </svg> Solicite um orçamento
@@ -1063,7 +987,7 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
           aria-label="Instagram da Vital Family"><svg>
             <use href="#i-instagram" />
           </svg></a>
@@ -1091,7 +1015,7 @@
     <span>Novembro Azul</span>
   </a>
 
-  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar no WhatsApp"><svg>
       <use href="#i-whatsapp" />
     </svg></a>

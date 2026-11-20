@@ -8,6 +8,8 @@
   <meta name="description"
     content="Transporte de pacientes com segurança, cuidado e tranquilidade. Transporte inter-hospitalar, altas, exames e consultas com equipe qualificada da Vital Family.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Transporte de Pacientes | Vital Family — Assistência em Saúde">
@@ -245,7 +247,7 @@
               </svg> Solicitar transporte agora
             </a>
             <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Transporte%20de%20Pacientes."
-              target="_blank" rel="noopener" class="btn btn--outline">
+              target="_blank" rel="noopener noreferrer" class="btn btn--outline">
               <svg class="ico">
                 <use href="#i-whatsapp" />
               </svg> Falar no WhatsApp
@@ -465,13 +467,13 @@
 
             <div class="vf-field vf-field--full">
               <label for="rem-origem">Endereço ou local de origem *</label>
-              <input type="text" id="rem-origem" name="origem"
+              <input type="text" id="rem-origem" name="origem" maxlength="200"
                 placeholder="Ex.: Hospital / Clínica / Bairro e Cidade de saída" required>
             </div>
 
             <div class="vf-field vf-field--full">
               <label for="rem-destino">Endereço ou local de destino *</label>
-              <input type="text" id="rem-destino" name="destino"
+              <input type="text" id="rem-destino" name="destino" maxlength="200"
                 placeholder="Ex.: Residência / Clínica / Hospital e Cidade de destino" required>
             </div>
 
@@ -496,7 +498,7 @@
 
             <div class="vf-field">
               <label for="rem-responsavel">Nome do responsável *</label>
-              <input type="text" id="rem-responsavel" name="responsavel" placeholder="Seu nome completo" required>
+              <input type="text" id="rem-responsavel" name="responsavel" placeholder="Seu nome completo" maxlength="120" required>
             </div>
 
             <div class="vf-field">
@@ -506,7 +508,7 @@
 
             <div class="vf-field vf-field--full">
               <label for="rem-obs">Observações adicionais (opcional)</label>
-              <textarea id="rem-obs" name="obs" rows="2"
+              <textarea id="rem-obs" name="obs" rows="2" maxlength="500"
                 placeholder="Caso queira informar horário aproximado, presença de escadas ou outras observações."></textarea>
             </div>
           </div>
@@ -545,7 +547,7 @@
         <a href="index.html#contato">Contato</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
           aria-label="Instagram da Vital Family"><svg>
             <use href="#i-instagram" />
           </svg></a>
@@ -572,7 +574,7 @@
     <span>Novembro Azul</span>
   </a>
 
-  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar no WhatsApp"><svg>
       <use href="#i-whatsapp" />
     </svg></a>

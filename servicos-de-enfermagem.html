@@ -8,6 +8,8 @@
   <meta name="description"
     content="Serviços de enfermagem especializados: tratamento de feridas, cuidados paliativos humanizados e palestras/capacitações corporativas de primeiros socorros básicos.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Serviços de Enfermagem | Vital Family — Assistência em Saúde">
@@ -161,7 +163,7 @@
               <li><a href="assistencia-em-eventos.html"><svg>
                     <use href="#i-heart-pulse" />
                   </svg> Assistência em Eventos</a></li>
-              <li><a href="servicos-de-enfermagem.html"><svg>
+              <li><a href="servicos-de-enfermagem.html" class="is-current"><svg>
                     <use href="#i-cross" />
                   </svg> Serviços de Enfermagem</a></li>
               <li><a href="index.html#servicos"><svg>
@@ -219,7 +221,7 @@
               </svg> Solicitar atendimento de enfermagem
             </a>
             <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20Servi%C3%A7os%20de%20Enfermagem%20da%20Vital%20Family."
-              target="_blank" rel="noopener" class="btn btn--outline">
+              target="_blank" rel="noopener noreferrer" class="btn btn--outline">
               <svg class="ico">
                 <use href="#i-whatsapp" />
               </svg> Falar no WhatsApp
@@ -244,9 +246,9 @@
     </section>
 
     <!-- ===== APRESENTAÇÃO / ABAS COM IMAGENS RESPONSIVAS ===== -->
-    <section class="services" id="especialidades" style="background:none; padding-top:20px;">
+    <section class="services services--nursing" id="especialidades">
       <div class="container">
-        <div class="nursing-showcase reveal" style="margin-top:0;">
+        <div class="nursing-showcase reveal">
           <div class="nursing-showcase__header">
             <span class="eyebrow"><svg class="ico"><use href="#i-shield" /></svg> NOSSAS FRENTES DE ATUAÇÃO</span>
             <h2 class="nursing-showcase__title">Especialidades e Cuidados de <span class="gold-text">Enfermagem</span></h2>
@@ -317,8 +319,8 @@
                 <!-- Painel 3: Palestras e Capacitações -->
                 <div class="nursing-panel" id="panel-enf-capacitacao" role="tabpanel" aria-labelledby="tab-enf-capacitacao" hidden>
                   <div class="nursing-panel__media">
-                    <img src="assets/img/palestra.jpeg" 
-                         srcset="assets/img/palestra.jpeg 960w, assets/img/palestra.jpeg 480w" 
+                    <img src="assets/img/enfermagem-capacitacao.jpg" 
+                         srcset="assets/img/enfermagem-capacitacao.jpg 960w, assets/img/enfermagem-capacitacao.jpg 480w" 
                          sizes="(max-width: 768px) 100vw, 560px"
                          alt="Palestras e capacitações de primeiros socorros nas empresas ministradas pela Vital Family" 
                          loading="lazy" width="960" height="540" class="nursing-panel__img">
@@ -346,15 +348,15 @@
                   <p class="nursing-form-card__desc">Preencha os campos abaixo para receber orientação direta com nossa coordenação no WhatsApp.</p>
                 </div>
 
-                <form class="nursing-mini-form" id="form-enfermagem" novalidate>
+                <form class="nursing-mini-form" id="form-enfermagem">
                   <div class="form-group">
                     <label for="sol-nome">Nome do Solicitante ou Empresa *</label>
-                    <input type="text" id="sol-nome" name="nome" placeholder="Ex: Maria Silva / Empresa ABC" required>
+                    <input type="text" id="sol-nome" name="nome" placeholder="Ex: Maria Silva / Empresa ABC" maxlength="120" required>
                   </div>
 
                   <div class="form-group">
                     <label for="sol-whatsapp">WhatsApp para Contato *</label>
-                    <input type="tel" id="sol-whatsapp" name="whatsapp" placeholder="(84) 99999-9999" inputmode="tel" autocomplete="tel" minlength="14" required>
+                    <input type="tel" id="sol-whatsapp" name="whatsapp" placeholder="(84) 99999-9999" inputmode="tel" autocomplete="tel" minlength="14" maxlength="15" required>
                   </div>
 
                   <div class="form-group">
@@ -370,12 +372,12 @@
 
                   <div class="form-group">
                     <label for="sol-local">Cidade / Bairro ou Local da Empresa *</label>
-                    <input type="text" id="sol-local" name="local" placeholder="Ex: Natal - Lagoa Nova" required>
+                    <input type="text" id="sol-local" name="local" placeholder="Ex: Natal - Lagoa Nova" maxlength="160" required>
                   </div>
 
                   <div class="form-group">
                     <label for="sol-obs">Observações / Detalhes (opcional)</label>
-                    <textarea id="sol-obs" name="obs" rows="3" placeholder="Conte brevemente sobre o paciente, o tipo de lesão ou a quantidade de colaboradores para treinamento..."></textarea>
+                    <textarea id="sol-obs" name="obs" rows="3" maxlength="500" placeholder="Conte brevemente sobre o paciente, o tipo de lesão ou a quantidade de colaboradores para treinamento..."></textarea>
                   </div>
 
                   <button type="submit" class="btn btn--gold btn--full">
@@ -457,32 +459,42 @@
         <a href="index.html#contato">Contato</a>
       </nav>
       <div class="footer__social">
-        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener"
+        <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer"
           aria-label="Instagram da Vital Family"><svg>
             <use href="#i-instagram" />
           </svg></a>
       </div>
       <div class="footer__motto">
-        <span class="script-white">Vital Family</span>
-        <span class="script-gold">Cuidando de quem você ama.</span>
+        <span class="script-gold">Sua saúde em boas mãos.</span>
+        <svg class="swash" viewBox="0 0 260 22" aria-hidden="true">
+          <path d="M4 18 C 80 4, 180 2, 256 8" fill="none" stroke="url(#gold)" stroke-width="3"
+            stroke-linecap="round" />
+        </svg>
       </div>
-      <div class="footer__bottom">
-        <small>© <span id="year">2026</span> Vital Family Assistência em Saúde LTDA • CNPJ 45.951.629/0001-55 • R.
-          Henrique Dias, 224 - Bom Pastor, Natal - RN, 59060-170. Todos os direitos reservados. Desenvolvido por Ag
-          Command.</small>
-      </div>
+    </div>
+    <div class="footer__meta">
+      <p class="footer__copy">© <span id="year">2026</span> Vital Family — Assistência em Saúde • CNPJ: 45.951.629/0001-55 •
+        R. Henrique Dias, 224 - Bom Pastor, Natal - RN, 59060-170. Todos os direitos reservados.</p>
+      <p class="footer__credit">Desenvolvido por <strong>Ag Command.</strong></p>
     </div>
   </footer>
 
+  <a href="index.html#novembro-azul" class="nov-float-tab" aria-label="A importância do Novembro Azul">
+    <svg>
+      <use href="#i-ribbon" />
+    </svg>
+    <span>Novembro Azul</span>
+  </a>
+
   <!-- ===== WHATSAPP FLUTUANTE ===== -->
-  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener"
+  <a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar no WhatsApp">
     <svg>
       <use href="#i-whatsapp" />
     </svg>
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

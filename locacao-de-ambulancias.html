@@ -6,6 +6,8 @@
   <title>Locação de Ambulâncias | Vital Family — Assistência em Saúde</title>
   <meta name="description" content="Locação de ambulâncias com estrutura equipada e equipe especializada para eventos, empresas, obras, clínicas e cobertura preventiva. Vital Family — Assistência em Saúde.">
   <meta name="theme-color" content="#07122a">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Locação de Ambulâncias | Vital Family — Assistência em Saúde">
@@ -117,7 +119,7 @@
           <a href="#solicitar-locacao" class="btn btn--gold">
             <svg class="ico"><use href="#i-ambulance"/></svg> Solicitar orçamento rápido
           </a>
-          <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Loca%C3%A7%C3%A3o%20de%20Ambul%C3%A2ncias." target="_blank" rel="noopener" class="btn btn--outline">
+          <a href="https://wa.me/5584998409453?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Loca%C3%A7%C3%A3o%20de%20Ambul%C3%A2ncias." target="_blank" rel="noopener noreferrer" class="btn btn--outline">
             <svg class="ico"><use href="#i-whatsapp"/></svg> Falar no WhatsApp
           </a>
         </div>
@@ -216,7 +218,7 @@
         <div class="vf-form__grid">
           <div class="vf-field">
             <label for="loc-responsavel">Nome ou Empresa *</label>
-            <input type="text" id="loc-responsavel" name="responsavel" placeholder="Seu nome ou razão social" required>
+            <input type="text" id="loc-responsavel" name="responsavel" placeholder="Seu nome ou razão social" maxlength="120" required>
           </div>
 
           <div class="vf-field">
@@ -238,17 +240,17 @@
 
           <div class="vf-field">
             <label for="loc-periodo">Data ou período desejado *</label>
-            <input type="text" id="loc-periodo" name="periodo" placeholder="Ex.: 25/11, final de semana ou mensal" required>
+            <input type="text" id="loc-periodo" name="periodo" placeholder="Ex.: 25/11, final de semana ou mensal" maxlength="120" required>
           </div>
 
           <div class="vf-field vf-field--full">
             <label for="loc-cidade">Cidade / Local de atendimento *</label>
-            <input type="text" id="loc-cidade" name="cidade" placeholder="Informe a cidade e o local" required>
+            <input type="text" id="loc-cidade" name="cidade" placeholder="Informe a cidade e o local" maxlength="160" required>
           </div>
 
           <div class="vf-field vf-field--full">
             <label for="loc-obs">Observações rápidas (opcional)</label>
-            <textarea id="loc-obs" name="obs" rows="2" placeholder="Ex.: público estimado, horários ou necessidade de equipe a bordo."></textarea>
+            <textarea id="loc-obs" name="obs" rows="2" maxlength="500" placeholder="Ex.: público estimado, horários ou necessidade de equipe a bordo."></textarea>
           </div>
         </div>
 
@@ -282,7 +284,7 @@
       <a href="index.html#contato">Contato</a>
     </nav>
     <div class="footer__social">
-      <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener" aria-label="Instagram da Vital Family"><svg><use href="#i-instagram"/></svg></a>
+      <a href="https://www.instagram.com/vitalfamily.as?dlrf=MWkxdXNpbHBlZmU1bw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Vital Family"><svg><use href="#i-instagram"/></svg></a>
     </div>
     <div class="footer__motto">
       <span class="script-gold">Sua saúde em boas mãos.</span>
@@ -300,7 +302,7 @@
   <span>Novembro Azul</span>
 </a>
 
-<a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+<a href="https://wa.me/5584998409453" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
 
 <script src="js/main.js" defer></script>
 </body>
